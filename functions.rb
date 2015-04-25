@@ -16,3 +16,20 @@ def sum_only_numbers(an_array)
   an_array.each { |x| sum += x if x.class == Fixnum or x.class == Float}
   return sum
 end
+
+def fizzbuzz
+  a = []
+  range = 1..100
+  for i in range
+    if i%3 == 0
+      a[i-1] = 'Fizz'
+    elsif i%5 == 0
+      a[i-1] = 'Buzz'
+    elsif i%5 == 0 and i%3 == 0
+      a[i-1] = 'FizzBuzz'
+    else
+      a[i-1] = i
+    end
+  end
+  return a
+end
